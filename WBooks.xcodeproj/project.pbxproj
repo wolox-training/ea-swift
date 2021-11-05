@@ -42,6 +42,8 @@
 		02953D3BCD13D3C3EF643A6A /* Pods-WBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		34F0BDF8AC9672E308FC7CE1 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E335D843457C5D33B34032C /* Pods-WBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.debug.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		73C28BE02735628100066A8E /* ConfigDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigDebug.xcconfig; sourceTree = "<group>"; };
+		73C28BE52735671000066A8E /* ConfigRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfigRelease.xcconfig; sourceTree = "<group>"; };
 		73D1235E2733282E00ADFE0A /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D123612733282E00ADFE0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D123632733282E00ADFE0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,9 +103,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		73C28BDF273561CC00066A8E /* ConfigurationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				73C28BE02735628100066A8E /* ConfigDebug.xcconfig */,
+				73C28BE52735671000066A8E /* ConfigRelease.xcconfig */,
+			);
+			path = ConfigurationFiles;
+			sourceTree = "<group>";
+		};
 		73D123552733282E00ADFE0A = {
 			isa = PBXGroup;
 			children = (
+				73C28BDF273561CC00066A8E /* ConfigurationFiles */,
 				73D123602733282E00ADFE0A /* WBooks */,
 				73D123772733283500ADFE0A /* WBooksTests */,
 				73D123812733283500ADFE0A /* WBooksUITests */,
@@ -164,7 +176,6 @@
 				02953D3BCD13D3C3EF643A6A /* Pods-WBooksTests.debug.xcconfig */,
 				FAD7B8A068353C740DB7B5D5 /* Pods-WBooksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -467,6 +478,7 @@
 /* Begin XCBuildConfiguration section */
 		73D123862733283500ADFE0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73C28BE02735628100066A8E /* ConfigDebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -528,6 +540,7 @@
 		};
 		73D123872733283500ADFE0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73C28BE52735671000066A8E /* ConfigRelease.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
