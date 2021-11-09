@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBAction func submitButton(_ sender: UIButton) {
+       print("button clicked")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-
