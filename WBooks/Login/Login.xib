@@ -21,17 +21,52 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9f1-3d-SSB">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d4Y-gn-mWt">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIi-gF-TKp" userLabel="Username Label">
+                            <rect key="frame" x="16" y="24" width="78.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-IP-DsW" userLabel="Username Text Field">
+                            <rect key="frame" x="16" y="53" width="382" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWB-08-Wxc" userLabel="Password Label">
+                            <rect key="frame" x="16" y="95" width="73.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIm-xy-CPn" userLabel="Password Text Field">
+                            <rect key="frame" x="16" y="124" width="382" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-Tq-bTf" userLabel="Submit Button">
+                            <rect key="frame" x="16" y="174" width="382" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                            <connections>
+                                <action selector="submitButtonAction:" destination="-1" eventType="touchUpInside" id="IZa-Ad-2wj"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="d4Y-gn-mWt" firstAttribute="top" secondItem="9f1-3d-SSB" secondAttribute="top" id="D1g-mg-bhX"/>
-                        <constraint firstAttribute="bottom" secondItem="d4Y-gn-mWt" secondAttribute="bottom" id="Vxy-Jt-Kk5"/>
-                        <constraint firstAttribute="trailing" secondItem="d4Y-gn-mWt" secondAttribute="trailing" id="iiN-9U-dbe"/>
-                        <constraint firstItem="d4Y-gn-mWt" firstAttribute="leading" secondItem="9f1-3d-SSB" secondAttribute="leading" id="xJg-wh-eKx"/>
+                        <constraint firstItem="SQe-IP-DsW" firstAttribute="top" secondItem="zIi-gF-TKp" secondAttribute="bottom" constant="8" id="0o8-Jl-Dlo"/>
+                        <constraint firstItem="VWB-08-Wxc" firstAttribute="leading" secondItem="9f1-3d-SSB" secondAttribute="leading" constant="16" id="9iw-N9-rR7"/>
+                        <constraint firstAttribute="trailing" secondItem="4KT-Tq-bTf" secondAttribute="trailing" constant="16" id="E9G-8A-Sp8"/>
+                        <constraint firstItem="VWB-08-Wxc" firstAttribute="top" secondItem="SQe-IP-DsW" secondAttribute="bottom" constant="8" id="IhJ-dh-pk1"/>
+                        <constraint firstItem="zIi-gF-TKp" firstAttribute="top" secondItem="9f1-3d-SSB" secondAttribute="top" constant="24" id="P6C-ip-93i"/>
+                        <constraint firstItem="4KT-Tq-bTf" firstAttribute="leading" secondItem="9f1-3d-SSB" secondAttribute="leading" constant="16" id="Ufn-8E-U9f"/>
+                        <constraint firstItem="zIi-gF-TKp" firstAttribute="leading" secondItem="9f1-3d-SSB" secondAttribute="leading" constant="16" id="Wh6-c7-bVM"/>
+                        <constraint firstAttribute="trailing" secondItem="SQe-IP-DsW" secondAttribute="trailing" constant="16" id="XwB-rM-mtt"/>
+                        <constraint firstItem="SQe-IP-DsW" firstAttribute="leading" secondItem="9f1-3d-SSB" secondAttribute="leading" constant="16" id="YiO-iW-UPI"/>
+                        <constraint firstAttribute="trailing" secondItem="kIm-xy-CPn" secondAttribute="trailing" constant="16" id="hEy-uE-i9I"/>
+                        <constraint firstItem="kIm-xy-CPn" firstAttribute="top" secondItem="VWB-08-Wxc" secondAttribute="bottom" constant="8" id="hKg-ys-C2L"/>
+                        <constraint firstItem="4KT-Tq-bTf" firstAttribute="top" secondItem="kIm-xy-CPn" secondAttribute="bottom" constant="16" id="ocO-Ek-8rk"/>
+                        <constraint firstItem="kIm-xy-CPn" firstAttribute="leading" secondItem="9f1-3d-SSB" secondAttribute="leading" constant="16" id="qt3-Qr-jCd"/>
                     </constraints>
                 </view>
             </subviews>

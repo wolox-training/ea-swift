@@ -4,12 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookList" customModule="WBooks" customModuleProvider="target">
             <connections>
+                <outlet property="booksTable" destination="VbE-i5-rCV" id="AQB-5L-P6c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,25 +18,32 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VbE-i5-rCV">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9b-r0-Xrs">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VbE-i5-rCV">
+                            <rect key="frame" x="0.0" y="34" width="414" height="774"/>
+                            <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="VbE-i5-rCV" firstAttribute="top" secondItem="Y9b-r0-Xrs" secondAttribute="top" constant="34" id="7wW-oX-P5P"/>
+                        <constraint firstAttribute="trailing" secondItem="VbE-i5-rCV" secondAttribute="trailing" id="NCg-WI-JIs"/>
+                        <constraint firstAttribute="bottom" secondItem="VbE-i5-rCV" secondAttribute="bottom" constant="10" id="dJF-mH-wTH"/>
+                        <constraint firstItem="VbE-i5-rCV" firstAttribute="leading" secondItem="Y9b-r0-Xrs" secondAttribute="leading" id="ka6-XZ-XrL"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.0" green="0.67843137254901964" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VbE-i5-rCV" secondAttribute="bottom" id="C7G-TG-0rT"/>
-                <constraint firstItem="VbE-i5-rCV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DkJ-jz-LAk"/>
-                <constraint firstItem="VbE-i5-rCV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Fpd-ox-0bH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VbE-i5-rCV" secondAttribute="trailing" id="YPg-9h-3Zd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Y9b-r0-Xrs" secondAttribute="bottom" id="8nC-hl-K84"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y9b-r0-Xrs" secondAttribute="trailing" id="ifb-A0-J7E"/>
+                <constraint firstItem="Y9b-r0-Xrs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lcE-yy-KVv"/>
+                <constraint firstItem="Y9b-r0-Xrs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="roc-MP-ZQI"/>
             </constraints>
             <point key="canvasLocation" x="139" y="117"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

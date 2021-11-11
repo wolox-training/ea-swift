@@ -15,7 +15,9 @@ class Login: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func submitButtonAction(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

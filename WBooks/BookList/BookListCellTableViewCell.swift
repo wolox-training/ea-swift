@@ -20,7 +20,8 @@ class BookListCellTableViewCell: UITableViewCell {
     func setData(book: Book) {
         authorLabel.text = book.author
         titleLabel.text = book.title
+        coverImage.image = book.cover
     }
     
-    static let identifier = "bookCell"
+    static let identifier = "BookListCellTableViewCell"
 }
