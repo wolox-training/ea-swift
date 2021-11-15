@@ -23,6 +23,7 @@
 		73D123792733283500ADFE0A /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D123782733283500ADFE0A /* WBooksTests.swift */; };
 		73D123832733283500ADFE0A /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D123822733283500ADFE0A /* WBooksUITests.swift */; };
 		73D123852733283500ADFE0A /* WBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D123842733283500ADFE0A /* WBooksUITestsLaunchTests.swift */; };
+		73E0ABE427429EDB0083B3A8 /* ExtensionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E0ABE327429EDB0083B3A8 /* ExtensionFunctions.swift */; };
 		D73C01B49C7AC62D3625A082 /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F0BDF8AC9672E308FC7CE1 /* Pods_WBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		73D1237E2733283500ADFE0A /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D123822733283500ADFE0A /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		73D123842733283500ADFE0A /* WBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73E0ABE327429EDB0083B3A8 /* ExtensionFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFunctions.swift; sourceTree = "<group>"; };
 		97B178FE78F661C3C7F54116 /* Pods_WBooks_WBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks_WBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65213D52A07B460A0684D8E /* Pods-WBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks.release.xcconfig"; path = "Target Support Files/Pods-WBooks/Pods-WBooks.release.xcconfig"; sourceTree = "<group>"; };
 		A80682C9316049B295E60E29 /* Pods-WBooks-WBooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.release.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		73D123602733282E00ADFE0A /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				73E0ABE227429EC40083B3A8 /* Utils */,
 				73577BBE273C47E800A5D750 /* Login */,
 				73577BB6273C2D1F00A5D750 /* Models */,
 				73577BAD273C196000A5D750 /* BookList */,
@@ -203,6 +206,14 @@
 				73D123842733283500ADFE0A /* WBooksUITestsLaunchTests.swift */,
 			);
 			path = WBooksUITests;
+			sourceTree = "<group>";
+		};
+		73E0ABE227429EC40083B3A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				73E0ABE327429EDB0083B3A8 /* ExtensionFunctions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F9DF5EE41715768ED3A53010 /* Pods */ = {
@@ -465,6 +476,7 @@
 				73D123642733282E00ADFE0A /* SceneDelegate.swift in Sources */,
 				73577BB8273C2D5100A5D750 /* BookModel.swift in Sources */,
 				73577BC1273C483500A5D750 /* Login.swift in Sources */,
+				73E0ABE427429EDB0083B3A8 /* ExtensionFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
