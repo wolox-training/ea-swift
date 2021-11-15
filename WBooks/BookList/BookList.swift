@@ -26,19 +26,15 @@ class BookList: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func setUpNavigationBar() {
-        let barColor = UIColor(rgb: 0x00ADEE)
-        let notificationsImage = UIImage(named: "ic_notifications")
+        let notificationsImage = UIImage(named: "ic_notifications.png")
         let notifications = UIBarButtonItem(image: notificationsImage, style: .plain, target: self, action: nil)
-        let searchImage = UIImage(named: "ic_search")
+        let searchImage = UIImage(named: "ic_search.png")
         let search = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: nil)
-        let appearance = UINavigationBarAppearance()
-        UINavigationBar.appearance().tintColor = .white
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = barColor
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.standardAppearance = appearance
-        navigationItem.scrollEdgeAppearance = appearance
-        navigationItem.compactAppearance = appearance
+        search.tintColor = .white
+        notifications.tintColor = .white
+        navigationItem.standardAppearance = NavigationController.navAppearance
+        navigationItem.scrollEdgeAppearance = NavigationController.navAppearance
+        navigationItem.compactAppearance = NavigationController.navAppearance
         navigationItem.title = "LIBRARY"
         navigationItem.leftBarButtonItem = notifications
         navigationItem.rightBarButtonItem = search
@@ -46,8 +42,8 @@ class BookList: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func getBooks() -> [Book] {
         var mockBooks: [Book] = []
-        
         let book1 = Book(cover: UIImage(named: "img_book1"), title: "First Book", author: "An author or smt idk")
+        
         mockBooks.append(book1)
         mockBooks.append(book1)
         mockBooks.append(book1)

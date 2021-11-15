@@ -27,6 +27,7 @@
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="VbE-i5-rCV" firstAttribute="top" secondItem="Y9b-r0-Xrs" secondAttribute="top" constant="34" id="7wW-oX-P5P"/>
                         <constraint firstAttribute="trailing" secondItem="VbE-i5-rCV" secondAttribute="trailing" id="NCg-WI-JIs"/>
