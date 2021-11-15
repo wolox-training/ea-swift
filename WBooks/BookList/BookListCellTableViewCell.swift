@@ -8,20 +8,14 @@
 import UIKit
 
 class BookListCellTableViewCell: UITableViewCell {
+    static let identifier = "BookListCellTableViewCell"
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var coverImage: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     func setData(book: Book) {
         authorLabel.text = book.author
         titleLabel.text = book.title
         coverImage.image = book.cover
     }
-    
-    static let identifier = "BookListCellTableViewCell"
 }
