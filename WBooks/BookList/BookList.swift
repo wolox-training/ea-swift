@@ -11,6 +11,10 @@ class BookList: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var books: [Book] = []
     @IBOutlet weak var booksTable: UITableView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         books = getBooks()
@@ -18,12 +22,28 @@ class BookList: UIViewController, UITableViewDataSource, UITableViewDelegate {
         booksTable.delegate = self
         let nib = UINib(nibName: BookListCellTableViewCell.identifier, bundle: Bundle.main)
         booksTable.register(nib, forCellReuseIdentifier: BookListCellTableViewCell.identifier)
+        setUpNavigationBar()
+    }
+    
+    func setUpNavigationBar() {
+        let notificationsImage = UIImage(named: "ic_notifications.png")
+        let notifications = UIBarButtonItem(image: notificationsImage, style: .plain, target: self, action: nil)
+        let searchImage = UIImage(named: "ic_search.png")
+        let search = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: nil)
+        search.tintColor = .white
+        notifications.tintColor = .white
+        navigationItem.standardAppearance = NavigationController.navAppearance
+        navigationItem.scrollEdgeAppearance = NavigationController.navAppearance
+        navigationItem.compactAppearance = NavigationController.navAppearance
+        navigationItem.title = "LIBRARY"
+        navigationItem.leftBarButtonItem = notifications
+        navigationItem.rightBarButtonItem = search
     }
     
     func getBooks() -> [Book] {
         var mockBooks: [Book] = []
-        
         let book1 = Book(cover: UIImage(named: "img_book1"), title: "First Book", author: "An author or smt idk")
+        
         mockBooks.append(book1)
         mockBooks.append(book1)
         mockBooks.append(book1)
